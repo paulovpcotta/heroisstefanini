@@ -5,6 +5,8 @@ public class PoderesDto {
 	private String nomePoder;
 	
 	private String forca;
+	
+	private String classePoder;
 
 	public String getNomePoder() {
 		return nomePoder;
@@ -21,5 +23,15 @@ public class PoderesDto {
 	public void setForca(String forca) {
 		this.forca = forca;
 	}
+
+	public String getClassePoder() {
+		return classePoder;
+	}
+
+	public void setClassePoder(String classePoder) {
+		this.classePoder = classePoder;
+	}
+	
+	
 	
 }
