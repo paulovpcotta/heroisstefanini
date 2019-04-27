@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.stefanini.heroi.dao.HeroisDAO;
+import com.stefanini.heroi.dto.HeroisDto;
+import com.stefanini.heroi.dto.PoderesDto;
 import com.stefanini.heroi.util.BancoMemoriaUtil;
-
-import br.com.bb.big.face.azure.dto.HeroisDto;
-import br.com.bb.big.face.azure.dto.PoderesDto;
 
 /**
  * Classe adicionar face
@@ -34,21 +33,12 @@ public class HeroisController {
 		HeroisDAO heroisDAO = new HeroisDAO();
 		return heroisDAO.cadastraHerois(heroisDto);
 	}
-//	
-//	@RequestMapping(method=RequestMethod.POST, value="/add-face-detect", consumes=MediaType.APPLICATION_JSON_VALUE)
-//	public List<DetectDto> adicionaFaceGroupDetect(@RequestBody AddFaceDto addFaceDto) throws ClientProtocolException, IOException, URISyntaxException, NoSuchAlgorithmException {
-//		return AddFaceLargeGroupSDK.getInstancia().sendImageDetect(addFaceDto.getNameGroup(), addFaceDto.getKey(), addFaceDto.getBody(),
-//				addFaceDto.getTypeImage(), addFaceDto);
-//	}
-//	
-//	@RequestMapping(method=RequestMethod.POST, value="/add-face-identify", consumes=MediaType.APPLICATION_JSON_VALUE)
-//	public String adicionaFaceGroupIdentify(@RequestBody IdentifyDto identifyDto) throws ClientProtocolException, IOException, URISyntaxException, NoSuchAlgorithmException {
-//		return AddFaceLargeGroupSDK.getInstancia().sendImageIdentify(identifyDto);
-//	}
-//	
-//	@RequestMapping(method=RequestMethod.POST, value="/add-face-verify", consumes=MediaType.APPLICATION_JSON_VALUE)
-//	public String adicionaFaceGroupVerify(@RequestBody VerifyDto verifyDto) throws ClientProtocolException, IOException, URISyntaxException, NoSuchAlgorithmException {
-//		return AddFaceLargeGroupSDK.getInstancia().sendImageVerify(verifyDto);
-//	}
+	
+	@RequestMapping(method=RequestMethod.GET, value="/randomico")
+	public List<HeroisDto> randomico() {
+		HeroisDAO heroisDAO = new HeroisDAO();
+		return heroisDAO.poderesRandomicos(BancoMemoriaUtil.heroisDtos);
+	}
+
 	
 }

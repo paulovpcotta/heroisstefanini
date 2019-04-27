@@ -1,4 +1,4 @@
-package br.com.bb.big.face.azure.dto;
+package com.stefanini.heroi.dto;
 
 import java.util.List;
 

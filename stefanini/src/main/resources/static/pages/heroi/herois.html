@@ -1,0 +1,46 @@
+<body>
+<div id="wrap">
+	<div ng-controller="abstractController"><menu></menu></div>
+	<div class="text-app-titulo">| Cadastrar | Poderes</div>
+	<form ng-controller="heroiController">
+    	<div class="contentform">
+			<div ng-class="cssMessage" ng-show="visibleMessage">{{messages}}</div>
+
+			<div class="leftcontact">
+				<div class="form-group">
+			        <p>Nome do Heroi<span>*</span></p>
+				        <input type="text" name="nome" id="nome" data-rule="required" placeholder="O nome do heroi"
+				        ng-model="nome"/>
+                	<div class="validation"></div>
+				</div><br><br>
+				<div class="form-group">
+					
+				</div>
+			</div>
+			
+			<div class="rightcontact">
+				<div class="form-group">
+			        <p>Sexo<span>*</span></p>
+				        <select name="hall" id="hall" ng-model="sexo" value="Selecione">
+						  <option>Selecione</option>
+						  <option>Feminino</option>
+						  <option>Masculino</option>
+						  <option>Outros</option>
+						</select>
+                	<div class="validation"></div>
+				</div><br><br>
+				<div class="form-group">
+					
+				</div>
+			</div>
+			
+			<div>
+				<button type="button" class="bouton-contact" ng-click="cadastraHeroi(nome, sexo)">Cadastrar Poder</button>
+			</div>
+			<div>
+				<button type="button" class="bouton-contact" ng-click="randomico()">Randomico</button>
+			</div>
+		</div>
+	</form>
+</div>
+</body>

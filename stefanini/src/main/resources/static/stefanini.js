@@ -10,10 +10,10 @@ stefanini.config(['$stateProvider', '$urlRouterProvider', '$routeProvider', func
 	   url: '/',
 	   templateUrl : 'pages/heroi/poderes.html',
 	   controller : 'cadastraPoderController',
-	}).state('group', {
-	   url: '/group',
-	   templateUrl : 'pages/face-group/list-face-group.html',
-	   controller : 'listFaceGroupLargeController',
+	}).state('herois', {
+	   url: '/herois',
+	   templateUrl : 'pages/heroi/herois.html',
+	   controller : 'heroiController',
 	});
 	
    $urlRouterProvider.otherwise('/');

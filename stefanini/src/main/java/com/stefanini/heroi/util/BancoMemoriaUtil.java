@@ -3,8 +3,8 @@ package com.stefanini.heroi.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bb.big.face.azure.dto.HeroisDto;
-import br.com.bb.big.face.azure.dto.PoderesDto;
+import com.stefanini.heroi.dto.HeroisDto;
+import com.stefanini.heroi.dto.PoderesDto;
 
 public class BancoMemoriaUtil {
 	
