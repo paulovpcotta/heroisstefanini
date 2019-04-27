@@ -8,7 +8,7 @@ import com.stefanini.heroi.util.BancoMemoriaUtil;
 public class HeroisDAO {
 
 	public List<HeroisDto> cadastraHerois(HeroisDto heroisDto){
-		return BancoMemoriaUtil.getInstance().gravaHerois(heroisDto);
+		return null;
 	}
 	
 	public List<HeroisDto> poderesRandomicos(List<HeroisDto> heroisDtos){
